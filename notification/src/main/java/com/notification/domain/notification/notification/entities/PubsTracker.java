@@ -17,15 +17,17 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="notification")
 
-public class PubsTracker extends   AbstractEntity{
-@Column(name="pricemin")
+public class PubsTracker extends  AbstractEntity{
+
+
+    @Column(name="pricemin")
     private String pricemin ;
-@Column(name ="pricemax" )
-private String pricemax ;
-@Column(name = "city")
-private String  city ;
-@Column(name = "distance")
-private String distance  ;
-@ManyToOne
+    @Column(name ="pricemax" )
+    private String pricemax ;
+    @Column(name = "city")
+    private String  city ;
+    @Column(name = "distance")
+    private String distance  ;
+    @Column(name = "pubId")
     private Long pubId ;
 }

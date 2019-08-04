@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
+
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -19,6 +19,7 @@ import java.time.Instant;
 @MappedSuperclass //annotate the  base cass which holds properties will be inherited .
 @EntityListeners(AuditingEntityListener.class) //activate  the auditing in spring data jpa
 public  abstract  class AbstractEntity implements Serializable {
+
     private static final long serialVersioID  = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
