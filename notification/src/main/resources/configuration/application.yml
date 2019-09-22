@@ -4,3 +4,6 @@ spring:
   cloud:
     config:
       override-system-properties: false
+
+    uri:
+      "http://localhost:8888"
