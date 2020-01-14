@@ -27,6 +27,11 @@ public class LocalisationService {
         return myLocalisation ;
 
     }
+    public void deleteAll(){
+
+         LocalisationRepository.deleteAll();
+
+    }
     @Transactional
     public Localisation findById(Long id){
         log.debug("Request to get cart : {}" , id );

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RequiredArgsConstructor
-@RequestMapping("admin")
+@RequestMapping("/admin")
 @RestController
 public class AdminController {
     private final AdminService adminService ;
@@ -16,8 +16,11 @@ public class AdminController {
     public List<Admin> findAll(){
         return this.adminService.findAll();
     }
-    @PostMapping()
+
+    @PostMapping
     public Admin create(@RequestBody Admin admin){
         return this.adminService.create(admin);
     }
+
+
 }

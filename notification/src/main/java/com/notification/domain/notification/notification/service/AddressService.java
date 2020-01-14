@@ -22,12 +22,16 @@ public class AddressService {
         return this.addressRepository.findAll() ;
 
     }
+    public void deleteAll(){
+        addressRepository.deleteAll();
+    }
     public Address create (Address address){
         Address myaddress = new Address(address.getAddress(),address.getState(),address.getRegion(),address.getCity(),address.getColor(),address.getCapacity(),address.getLatitude(),address.getLangitude());
         addressRepository.save(myaddress);
         return myaddress ;
 
     }
+
     @Transactional
     public Address findById(Long id){
         log.debug("Request to get cart : {}" , id );

@@ -1,5 +1,6 @@
 package com.notification.domain.notification.notification.entities;
 
+import com.opencsv.bean.CsvBindByPosition;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,8 +19,10 @@ public class Localisation  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id ;
+    @CsvBindByPosition(position = 0)
     @Column(name = "latitude")
     private String  latitude ;
+    @CsvBindByPosition(position = 1)
     @Column(name = "longitude")
     private String longitude  ;
     @Column(name = "type ")

@@ -28,4 +28,14 @@ public class AddressController {
     public Address create(@RequestBody Address address){
         return this.addressService.create(address);
     }
+
+    @PostMapping("/replaceall")
+    public  void replaceall (@RequestBody Address[]  addresses){
+        addressService.deleteAll();
+        for (Address address : addresses ) {
+            addressService.create(address) ;
+            System.out.println("salem ");
+        }
+
+    }
 }
